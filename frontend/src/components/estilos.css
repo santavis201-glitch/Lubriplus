@@ -1,0 +1,242 @@
+/* ============================================================
+   LUBRIPLUS - HOJA DE ESTILOS GLOBAL (ORO PREMUM & DARK MODE)
+   ============================================================ */
+
+/* 1. CONFIGURACIÓN DE COLORES Y VARIABLES */
+:root {
+  --oro-primario: linear-gradient(135deg, #BF953F 0%, #FCF6BA 25%, #B38728 50%, #FBF5B7 75%, #AA771C 100%);
+  --oro-solido: #D4AF37;
+  --negro-profundo: #050505;
+  --negro-suave: #121212;
+  --blanco-marfil: #fcf6ba;
+  --gris-oscuro: #222;
+  --fuente-principal: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* 2. RESET Y ESTRUCTURA BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--negro-profundo);
+  color: #fff;
+  font-family: var(--fuente-principal);
+  line-height: 1.6;
+}
+
+/* 3. NAVEGACIÓN (NAVBAR) */
+.navbar-lubriplus {
+  background: var(--negro-suave);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  border-bottom: 2px solid var(--oro-solido);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+/* 4. BOTONES ESTILO LINGOTE */
+.btn-dorado {
+  background: var(--oro-primario);
+  color: #000;
+}
+
+/* --- LUBRIPLUS: ESTILOS GLOBALES (NEGRO Y DORADO PREMIUM) --- */
+
+/* 1. Variables de Color y Reset */
+:root {
+  --oro-primario: linear-gradient(135deg, #BF953F 0%, #FCF6BA 25%, #B38728 50%, #FBF5B7 75%, #AA771C 100%);
+  --oro-solido: #D4AF37;
+  --oro-oscuro: #8A6D3B;
+  --negro-puro: #000000;
+  --negro-mate: #121212;
+  --gris-oscuro: #1E1E1E;
+  --blanco-oro: #FCF6BA;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: var(--negro-puro);
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* 2. Barra de Navegación (Navbar) */
+.navbar-lubriplus {
+  background-color: var(--negro-mate);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  border-bottom: 2px solid var(--oro-solido);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* 3. Botones Estilo Lingote (btn-dorado) */
+.btn-dorado {
+  background: var(--oro-primario);
+  color: #000;
+  border: 1px solid var(--oro-oscuro);
+  padding: 10px 22px;
+  font-weight: 800;
+  text-transform: uppercase;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+.btn-dorado:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.2);
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
+
+/* 4. Menú Desplegable (Dropdown) para Servicios */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--negro-mate);
+  min-width: 240px;
+  border: 1px solid var(--oro-solido);
+  border-radius: 8px;
+  margin-top: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,1);
+  overflow: hidden;
+}
+
+.submenu-item {
+  background: transparent;
+  color: var(--blanco-oro);
+  padding: 14px 20px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  border-bottom: 1px solid #333;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.submenu-item:hover {
+  background: rgba(191, 149, 63, 0.15);
+  padding-left: 28px;
+  color: #fff;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* 5. Estilo para el Botón de Factura (Destacado) */
+.btn-factura {
+  background: transparent;
+  color: var(--oro-solido);
+  border: 2px solid var(--oro-solido);
+  padding: 10px 25px;
+  font-weight: bold;
+  border-radius: 50px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.btn-factura:hover {
+  background: var(--oro-primario);
+  color: #000;
+  box-shadow: 0 0 20px rgba(255, 191, 0, 0.6);
+}
+
+/* 6. Contenedores de Contenido (Grillas de Productos) */
+.contenedor-principal {
+  padding: 40px 5%;
+}
+
+.titulo-seccion {
+  color: var(--oro-solido);
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  border-left: 5px solid var(--oro-solido);
+  padding-left: 15px;
+  font-size: 2rem;
+}
+
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, min-minmax(250px, 1fr));
+  gap: 25px;
+}
+
+/* 7. Cards de Productos e Inventario */
+.card-lubriplus {
+  background-color: var(--gris-oscuro);
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card-lubriplus:hover {
+  border-color: var(--oro-solido);
+  transform: scale(1.02);
+}
+
+.precio-oro {
+  color: var(--oro-solido);
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* 8. Formularios de Facturación */
+.input-lubriplus {
+  background: #111;
+  border: 1px solid #444;
+  color: #fff;
+  padding: 12px;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.input-lubriplus:focus {
+  border-color: var(--oro-solido);
+  outline: none;
+}
+
+/* 9. Utilidades */
+.texto-dorado { color: var(--oro-solido); }
+.fondo-negro { background-color: var(--negro-puro); }

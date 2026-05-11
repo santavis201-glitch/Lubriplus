@@ -1,0 +1,144 @@
+/* --- 1. ESTILOS GLOBALES --- */
+:root {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #000;
+  color: white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* --- 2. ESTILOS EXCLUSIVOS DEL LOGIN/REGISTRO --- */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('./assets/fondo-carro.jpg');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.auth-card {
+  background: rgba(15, 15, 15, 0.95);
+  padding: 40px;
+  border-radius: 15px;
+  border: 1px solid #d4af37;
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+  box-shadow: 0 10px 50px rgba(0,0,0,1);
+}
+
+/* Gota de aceite */
+.oil-drop {
+  width: 50px;
+  filter: drop-shadow(0 0 8px #d4af37);
+  animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* --- 3. ESTILOS EXCLUSIVOS DEL HOME (CATÁLOGO) --- */
+.home-layout {
+  background-color: #0a0a0a;
+  min-height: 100vh;
+  display: block; /* Importante: quitamos el flex del login */
+}
+
+/* Navbar */
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  background: #111;
+  border-bottom: 2px solid #d4af37;
+}
+
+.nav-logo { font-size: 1.6rem; font-weight: bold; letter-spacing: 2px; }
+.nav-logo span { color: #d4af37; }
+
+/* Perfil de Usuario */
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #1a1a1a;
+  padding: 6px 18px;
+  border-radius: 30px;
+  border: 1px solid #333;
+}
+.user-name span { color: #d4af37; font-weight: bold; text-transform: capitalize; }
+
+/* Grilla del Catálogo */
+.catalog-container {
+  padding: 40px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* Tarjeta de Producto */
+.product-card {
+  background: #151515;
+  border-radius: 12px;
+  padding: 25px;
+  border: 1px solid #222;
+  text-align: center;
+  transition: 0.3s;
+}
+.product-card:hover {
+  border-color: #d4af37;
+  transform: translateY(-5px);
+  background: #1a1a1a;
+}
+
+.product-icon { font-size: 4rem; margin-bottom: 15px; display: block; }
+.product-card h3 { color: #fff; margin: 10px 0; }
+.product-card p { color: #888; font-size: 0.9rem; margin-bottom: 20px; }
+
+.price-tag {
+  display: block;
+  font-size: 1.4rem;
+  color: #d4af37;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Botones */
+button {
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-add {
+  background: #d4af37;
+  color: #000;
+  width: 100%;
+  padding: 12px;
+}
+
+.btn-logout-small {
+  background: transparent;
+  color: #ff4d4d;
+  border: 1px solid #ff4d4d;
+  padding: 6px 15px;
+  margin-left: 15px;
+}
+.btn-logout-small:hover { background: #ff4d4d; color: #fff; }

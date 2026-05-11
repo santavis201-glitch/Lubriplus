@@ -1,0 +1,283 @@
+/* =========================================
+   VARIABLES Y BASE
+   ========================================= */
+:root {
+  --gold: #d4af37;
+  --gold-dark: #aa8c2c;
+  --dark-bg: #0a0a0a;
+  --card-bg: #151515;
+  --text-white: #ffffff;
+  --text-gray: #a0a0a0;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: var(--dark-bg);
+  color: var(--text-white);
+  overflow-x: hidden;
+}
+
+/* =========================================
+   PANTALLA DE BIENVENIDA (GATEWAY)
+   ========================================= */
+.welcome-screen {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, #1a1a1a 0%, #050505 100%);
+  position: relative;
+}
+
+.welcome-screen::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: var(--gold);
+  filter: blur(180px);
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+.welcome-card {
+  text-align: center;
+  padding: 60px 40px;
+  background: rgba(25, 25, 25, 0.7);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 30px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+  max-width: 450px;
+  width: 90%;
+  z-index: 10;
+}
+
+.welcome-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.btn-welcome-client {
+  background: var(--gold);
+  color: #000;
+  padding: 18px;
+  border-radius: 15px;
+  font-weight: 800;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.btn-welcome-client:hover {
+  transform: translateY(-3px);
+  background: #fff;
+  box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+}
+
+.btn-welcome-admin {
+  background: transparent;
+  color: var(--gold);
+  padding: 16px;
+  border-radius: 15px;
+  font-weight: 600;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-welcome-admin:hover {
+  background: rgba(212, 175, 55, 0.1);
+  border-color: var(--gold);
+}
+
+/* =========================================
+   NAVEGACIÓN Y HEADER
+   ========================================= */
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  background: rgba(10, 10, 10, 0.95);
+  border-bottom: 1px solid #222;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-btn-premium {
+  background: none;
+  border: none;
+  color: var(--text-gray);
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-transform: uppercase;
+}
+
+.nav-btn-premium:hover, .nav-btn-premium.active {
+  color: var(--gold);
+  background: rgba(212, 175, 55, 0.05);
+}
+
+/* =========================================
+   COMPONENTES UI (INPUTS Y BOTONES)
+   ========================================= */
+.gold-text-luxury {
+  color: var(--gold);
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.dark-input {
+  width: 100%;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  color: #fff;
+  padding: 12px 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  transition: var(--transition);
+}
+
+.dark-input:focus {
+  outline: none;
+  border-color: var(--gold);
+  background: #222;
+}
+
+.label-gold {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--gold);
+  margin-bottom: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.add-btn {
+  width: 100%;
+  background: var(--gold);
+  color: #000;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.add-btn:hover {
+  background: #fff;
+  transform: scale(1.02);
+}
+
+/* =========================================
+   GRILLA DE PRODUCTOS
+   ========================================= */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.product-card {
+  background: var(--card-bg);
+  border: 1px solid #222;
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.product-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+}
+
+/* =========================================
+   CARRITO Y BADGE
+   ========================================= */
+.cart-badge {
+  background: var(--gold);
+  color: #000;
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 2px 7px;
+  border-radius: 50%;
+  margin-left: 5px;
+  display: inline-block;
+}
+
+.bump {
+  animation: bumpAnim 0.3s ease-out;
+}
+
+@keyframes bumpAnim {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.4); }
+  100% { transform: scale(1); }
+}
+
+/* =========================================
+   MODALES Y OVERLAYS
+   ========================================= */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+}
+
+.modal-content {
+  background: #111;
+  border: 1px solid var(--gold);
+  padding: 40px;
+  border-radius: 25px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+}
+
+/* =========================================
+   ANIMACIONES
+   ========================================= */
+.animate-fade {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,188 @@
+/* =========================================
+   1. VARIABLES GLOBALES Y RESET
+   ========================================= */
+:root {
+  --oro: #d4af37;
+  --oro-brillante: #f1d592;
+  --negro-fondo: #000000;
+  --negro-card: #111111;
+  --gris-borde: #333333;
+  --blanco: #ffffff;
+  --rojo: #ff4d4d;
+  --transicion: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+  text-transform: none;
+}
+
+body, html {
+  background-color: var(--negro-fondo);
+  color: var(--blanco);
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* =========================================
+   2. ESTRUCTURAS DE DISEÑO (LAYOUTS)
+   ========================================= */
+
+/* Para Login y Registro (Centrado total) */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: radial-gradient(circle, #1a1a1a 0%, #000000 100%);
+}
+
+/* Para Inicio (Barra lateral + Contenido) */
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.sidebar {
+  width: 280px;
+  background-color: var(--negro-card);
+  border-right: 1px solid var(--gris-borde);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-main {
+  flex: 1;
+  padding: 3rem;
+  overflow-y: auto;
+  background-color: var(--negro-fondo);
+}
+
+/* =========================================
+   3. COMPONENTES COMUNES (TARJETAS E INPUTS)
+   ========================================= */
+
+.login-card, .stat-card {
+  background-color: var(--negro-card);
+  padding: 2.5rem;
+  border-radius: 15px;
+  border: 1px solid var(--oro);
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.1);
+  width: 100%;
+  max-width: 420px;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 15px;
+  background: #080808;
+  border: 1px solid var(--gris-borde);
+  border-radius: 8px;
+  color: var(--blanco);
+  outline: none;
+  transition: var(--transicion);
+}
+
+.input-group input:focus {
+  border-color: var(--oro);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+}
+
+/* =========================================
+   4. TIPOGRAFÍA Y ELEMENTOS VISUALES
+   ========================================= */
+
+.logo-title, .text-gold {
+  color: var(--oro) !important;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+.login-subtitle {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  letter-spacing: 2px;
+}
+
+.gold-line {
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--oro), transparent);
+  margin: 20px 0;
+  border: none;
+}
+
+/* =========================================
+   5. BOTONES GLOBALES
+   ========================================= */
+
+.btn-gold {
+  background-color: var(--oro);
+  color: var(--negro-fondo);
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: var(--transicion);
+}
+
+.btn-gold:hover {
+  background-color: var(--oro-brillante);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--oro);
+  border: 1px solid var(--oro);
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transicion);
+}
+
+.btn-outline:hover {
+  background: rgba(212, 175, 55, 0.1);
+}
+
+/* =========================================
+   6. TABLAS DE INVENTARIO
+   ========================================= */
+
+.table-wrapper {
+  margin-top: 20px;
+  border: 1px solid var(--gris-borde);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.gold-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.gold-table th {
+  background: #1a1a1a;
+  color: var(--oro);
+  padding: 15px;
+  text-align: left;
+}
+
+.gold-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #222;
+}
+
+.gold-table tr:hover {
+  background: #151515;
+}

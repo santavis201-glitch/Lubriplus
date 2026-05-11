@@ -1,0 +1,35 @@
+# Dependencias
+node_modules/
+jspm_packages/
+
+# Compilación / Producción
+build/
+dist/
+out/
+
+# Logs de errores
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Variables de entorno (¡MUY IMPORTANTE!)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Caché y herramientas de desarrollo
+.cache/
+.eslintcache
+.stylelintcache
+
+# Archivos del sistema (Mac/Windows)
+.DS_Store
+Thumbs.db
+
+# IDEs (VS Code, WebStorm, etc.)
+.vscode/
+.idea/
+*.swp
+*.scratch
